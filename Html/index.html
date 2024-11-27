@@ -3,22 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <form>
+    <form action="cadastro.html" method="POST">
         <fieldset>
-          <legend>Choose your favorite monster</legend>
-      
-          <input type="radio" id="kraken" name="monster" value="K" />
-          <label for="kraken">Kraken</label><br />
-      
-          <input type="radio" id="sasquatch" name="monster" value="S" />
-          <label for="sasquatch">Sasquatch</label><br />
-      
-          <input type="radio" id="mothman" name="monster" value="M" />
-          <label for="mothman">Mothman</label>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+
+            <label for="estadoCivil">Est. Civil:</label>
+            <select id="estadoCivil" name="estadoCivil" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Solteiro">Solteiro</option>
+                <option value="Casado">Casado</option>
+                <option value="Viuvo">Viúvo</option>
+                <option value="Divorciado">Divorciado</option>
+            </select>
         </fieldset>
-      </form>
+
+        <fieldset>
+            <legend>Dados de Contato</legend>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <label for="uf">UF:</label>
+            <select id="uf" name="uf" required>
+                <option value="">Selecione</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados de Cadastro</legend>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <p>Deseja receber informações sobre os seguintes assuntos?</p>
+            <div class="checkbox-container"></div>
+              <label><input type="checkbox" name="assuntos" value="tecnologia"> Tecnologia</label>
+              <label><input type="checkbox" name="assuntos" value="esportes"> Esportes</label>
+              <label><input type="checkbox" name="assuntos" value="culinaria"> Culinária</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Política</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Policial</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Tempo</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Cultura</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Economia</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Jogos</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Educação</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Viagem</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Empregos</label>
+              <label><input type="checkbox" name="assuntos" value="politica"> Moda e Estilo</label>
+            </div>
+            <label><input type="checkbox" name="termos" required> Li e aceito as regras de cadastro.</label>
+        </fieldset>
+
+        <button type="submit">Confirmar</button>
+        <button type="reset">Retornar</button>
+    </form>
 </body>
-</html> 
+</html>

@@ -1,0 +1,107 @@
+/* Estilo geral do formulário */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #333333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Efeito ao preencher */
+input:focus, select:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo dos botões */
+button[type="submit"],
+button[type="reset"] {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="reset"] {
+    background-color: #6c757d;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Estiliza o contêiner dos checkboxes */
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre os checkboxes */
+}
+
+/* Cada checkbox com o texto na frente */
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+/* Limita o número de checkboxes por linha (7 no máximo) */
+.checkbox-container {
+    max-width: 600px; /* Ajuste o valor conforme necessário */
+}
+
+.checkbox-container label:nth-of-type(7n) {
+    flex-basis: 100%; /* Move para a próxima linha a cada 7 elementos */
+}
+
+/* Checkbox de aceitação de termos */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
