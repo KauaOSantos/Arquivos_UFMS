@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="cadastro.html" method="POST">
+    <form id="cadastroForm">
         <fieldset>
             <legend>Dados Pessoais</legend>
             <label for="nome">Nome Completo:</label>
@@ -78,14 +78,17 @@
                 <option value="TO">TO</option>
             </select>
         </fieldset>
-
         <fieldset>
             <legend>Dados de Cadastro</legend>
             <label for="login">Login:</label>
             <input type="text" id="login" name="login" required>
 
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
+            <div class="containerInput">
+                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                <button type="button" id="toggleSenha">
+                    <img id="iconeOlho" src="olho.png" alt="Mostrar senha">
+                </button>
+            </div>
 
             <p>Deseja receber informações sobre os seguintes assuntos?</p>
             <div class="checkbox-container"></div>
@@ -109,5 +112,33 @@
         <button type="submit">Confirmar</button>
         <button type="reset">Retornar</button>
     </form>
+
+    <p id="mensagemSucesso" style="display: none; color: green; font-weight: bold;">
+        Formulário enviado com sucesso!
+    </p>
+
+    <script>
+        document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            document.getElementById("mensagemSucesso").style.display = "block"; 
+            this.reset();
+        });
+
+        document.getElementById("toggleSenha").addEventListener("click", function() {
+            let inputSenha = document.getElementById("senha");
+            let iconeOlho = document.getElementById("iconeOlho");
+
+            if (inputSenha.type === "password") {
+                inputSenha.type = "text";
+                iconeOlho.src = "olho2.png"; 
+                iconeOlho.alt = "Esconder senha";
+            } 
+            else {
+                inputSenha.type = "password";
+                iconeOlho.src = "olho.png"; 
+                iconeOlho.alt = "Mostrar senha";
+            }
+        });
+    </script>
 </body>
 </html>
