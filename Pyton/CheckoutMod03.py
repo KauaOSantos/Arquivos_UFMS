@@ -1,4 +1,3 @@
-
 tempo = float(input("Digite o tempo da viagem em horas: "))
 velocidade_media = float(input("Digite a velocidade média em km/h: "))
 consumo_medio = float(input("Digite o consumo médio do veículo em km/l: "))

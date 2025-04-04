@@ -41,12 +41,10 @@ public class ContaCorrente {
         return primeiroNome + " " + sobrenome;
     }
 
-    // Método para obter o número da conta
     public long getNumero() {
         return numeroConta;
     }
 
-    // Método main para testar a classe
     public static void main(String[] args) {
         ContaCorrente conta = new ContaCorrente("Matheus", "Silva", 123456789);
 
