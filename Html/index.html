@@ -113,14 +113,10 @@
         <button type="reset">Retornar</button>
     </form>
 
-    <p id="mensagemSucesso" style="display: none; color: green; font-weight: bold;">
-        Formulário enviado com sucesso!
-    </p>
-
     <script>
         document.getElementById("cadastroForm").addEventListener("submit", function(event) {
             event.preventDefault(); 
-            document.getElementById("mensagemSucesso").style.display = "block"; 
+            alert("Formulário enviado com sucesso!");
             this.reset();
         });
 
